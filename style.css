@@ -1,0 +1,58 @@
+/* General styling for the dashboard */
+#dashboard {
+    background-color: #9e9696;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Styling for individual sections */
+#temp, #location, #info {
+    background-color: #9e9696;
+    padding: 20px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    display: inline-block;
+    width: 300px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure height consistency and proper alignment */
+#temp, #alarm, #battery {
+    min-height: 150px;
+}
+
+#location {
+    width: 300px;
+    min-height: 150px;
+    margin: 0;
+}
+
+#info {
+    width: 300px;
+    min-height: 150px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#info #alarm, #info #battery {
+    width: 100%;
+    margin: 0;
+}
+
+/* Arrange location and info beside temp */
+#dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Add some spacing for better readability */
+#dashboard div {
+    margin: 10px 0;
+}
